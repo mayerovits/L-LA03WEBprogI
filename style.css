@@ -1,0 +1,77 @@
+/* Alap beállítások */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #d8d8da;
+    color: #1c1e21;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2, h3, h4, h5 {
+    color: #0060df;
+  }
+  
+  /* Navigációs sáv */
+  .navbar {
+    background-color: #10009c !important;
+  }
+  
+  .navbar-brand, .nav-link {
+    color: white !important;
+    font-weight: 500;
+  }
+  
+  .nav-link.active {
+    background-color: #006eff;
+    border-radius: 5px;
+  }
+  
+  /* Képek */
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Profilképek */
+  .rounded-circle {
+    border: 3px solid #000000;
+  }
+  
+  /* Tartalomdobozok */
+  .card, .custom-box {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  /* Gombok */
+  button, .btn {
+    background-color: #0e62d1;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-weight: bold;
+  }
+  
+  button:hover, .btn:hover {
+    background-color: #0e62d1;
+  }
+  
+  /* Form placeholder szöveg */
+  ::placeholder {
+    color: #999;
+    opacity: 1;
+  }
+  
+  /* Footer vagy középre igazított info */
+  .center-text {
+    text-align: center;
+    color: gray;
+    font-style: italic;
+    margin-top: 20px;
+  }
+  

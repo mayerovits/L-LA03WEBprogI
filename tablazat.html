@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Táblázat</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigáció -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Weboldal</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Kezdőlap</a></li>
+          <li class="nav-item"><a class="nav-link" href="urlap.html">Űrlap</a></li>
+          <li class="nav-item"><a class="nav-link active" href="tablazat.html">Táblázat</a></li>
+          <li class="nav-item"><a class="nav-link" href="tartalom.html">Tartalom</a></li>
+          <li class="nav-item"><a class="nav-link" href="keszito.html">Készítő</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Tartalom -->
+  <div class="container mt-4">
+    <h2>Vízállás táblázat</h2>
+    <p>Az alábbi táblázat véletlenszerű vízállás adatokat mutat -50 és +150 közötti értékekkel.</p>
+
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped text-center" id="vizTabla">
+        <thead class="table-primary">
+          <tr>
+            <th>#</th>
+            <th>Hétfő</th>
+            <th>Kedd</th>
+            <th>Szerda</th>
+            <th>Csütörtök</th>
+            <th>Péntek</th>
+            <th>Szombat</th>
+            <th>Vasárnap</th>
+          </tr>
+        </thead>
+        <tbody>
+         
+        </tbody>
+      </table>
+    </div>
+
+    
+    <div class="row mt-4">
+      <div class="col-md-4"><img src="kepek/kep1.jpg" alt="Kép 1" class="img-fluid mb-3"></div>
+      <div class="col-md-4"><img src="kepek/kep2.jpg" alt="Kép 2" class="img-fluid mb-3"></div>
+      <div class="col-md-4"><img src="kepek/kep3.jpg" alt="Kép 3" class="img-fluid mb-3"></div>
+    </div>
+  </div>
+
+  <script>
+    const tabla = document.querySelector("#vizTabla tbody");
+    const napok = ["Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat", "Vasárnap"];
+
+    for (let i = 0; i < 25; i++) {
+      let sor = `<tr><th>${i + 1}</th>`;
+      for (let j = 0; j < 7; j++) {
+        const randomSzam = Math.floor(Math.random() * 201) - 50;
+        sor += `<td>${randomSzam}</td>`;
+      }
+      sor += `</tr>`;
+      tabla.innerHTML += sor;
+    }
+  </script>
+    <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
